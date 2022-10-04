@@ -1,6 +1,4 @@
 ## Kota.gay
 
-https://kota.gay
+This is an alternate portfolio to https://kotais.gay
 Website is live.
--------------------------
-You can find my alternate portfolio @ https://kotais.gay
