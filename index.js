@@ -23,7 +23,7 @@ const setResponse = (res) => {
     console.log(`[last.fm] Received song data: ${res.name} - ${res.artist}`);
     document.querySelector(
       "#spotify"
-    ).innerHTML = `<div class="bg-green-300 px-6 md:px-4 py-4" style="display:block">
+    ).innerHTML = `<div class="spotify-rainbow-animation px-6 md:px-4 py-4" style="display:block">
       <div class="max-w-6xl mx-auto container text-grey-300">
         <div class="flex">
           <div class="flex-initial">
