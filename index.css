@@ -34,7 +34,7 @@
 
   .spotify-rainbow-animation {
     background-image: 
-      linear-gradient(to left, rgb(255, 0, 204),rgb(0, 123, 255),rgb(255, 0, 204),rgb(0, 123, 255),rgb(255, 0, 204),rgb(0, 123, 255),rgb(255, 0, 204), rgb(0, 123, 255)); 
+      linear-gradient(to right, rgb(255, 0, 204),rgb(0, 123, 255),rgb(255, 0, 204),rgb(0, 123, 255),rgb(255, 0, 204),rgb(0, 123, 255),rgb(255, 0, 204), rgb(0, 123, 255)); 
     animation: rainbow-animation 60s linear infinite;
   }
 
