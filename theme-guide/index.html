@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>iOS Theming Guide</title>
+    <link rel="icon" href="../assets/favicon.ico" class="next-head"/>
+    <link rel="stylesheet" type="text/css" href="../assets/theme-guide/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="../assets/global-navbar/navbar.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+</head>
+<body>
+
+<div id="navbarContainer">
+    <div id="navbar">
+          <a href="https://pinpal.github.io/"><img class="logo" src="../assets/pinpal.png"></a>
+          <a href="https://pinpal.github.io/"><h1 id="title">PINPAL</h1></a>
+
+        <div class="navIconContainer">
+          <a href="https://twitter.com/TPINPAL">
+            <div class="navButton" style="background: linear-gradient(to right, #55ACEF , #0A76E7)">
+              <img src="../assets/page-icons/twitter.png" class="navButtonIcon" align="left">Twitter
+            </div></a>
+      
+          <a href="https://github.com/PINPAL">
+            <div class="navButton" style="background: linear-gradient(to right, #AA4DB4 , #8A3699)">
+              <img src="../assets/page-icons/github.png" class="navButtonIcon" align="left">Github
+            </div></a>
+    
+          <a href="https://discordapp.com/invite/jb">
+            <div class="navButton" style="background: linear-gradient(to right, #83A1DA , #6380B4)">
+              <img src="../assets/page-icons/discord.png" class="navButtonIcon" align="left">Discord
+            </div></a>
+
+            <a href="https://www.reddit.com/user/THE_PINPAL614">
+              <div class="navButton" style="background: linear-gradient(to right, #FF4C02 , #ED0A21)">
+                <img src="../assets/page-icons/reddit.png" class="navButtonIcon" align="left">Reddit
+              </div></a>
+
+        </div>
+
+        <div id="lowerNavContent">
+            <a onClick="goTo('link1')">Folder Structure</a>
+            <a onClick="goTo('link2')">Info.plist</a>
+            <a onClick="goTo('link3')">Creating Icons</a>
+            <a onClick="goTo('link4')">Saving Icons</a>
+            <a onClick="goTo('link5')">Icon Masks</a>
+            <a onClick="goTo('link6')">Prefs Icons</a>
+            <a onClick="goTo('link7')">Compile</a>
+        </div>
+      </div>
+  </div>
+
+<div class="wrapper">
+
+  <h1 id="bigtitle">iOS Theming Guide</h1>
+  <h1>Introduction</h1>
+
+  <div class="bigbox">
+    <h2>Welcome to the guide!</h2>
+
+    <p> In this tutorial I'm going to teach you how to create your very own iOS theme!
+    <br> Before we get started you will need the following prerequisites:</p>
+
+    <img src="../assets/theme-guide/iosdevice.png" style="display:inline-block">
+    <img src="../assets/theme-guide/computer.png" style="display:inline-block">
+
+    <p> This guide was written by PINPAL.
+    If you have any questions, feel free to send me a message:</p>
+
+      <a href="https://discordapp.com/channels/@me" style="display:inline-block;min-width: 230px">
+        <img class="twitter" src="/../assets/social-icons/Discord.png" style="float:left;padding: 10px">
+          <p>Discord<br><span style="color: rgba(255,255,255,.5)">PINPAL#2591</span></p>
+      </a>
+      <a href="https://twitter.com/TPinpal" style="display:inline-block;min-width: 230px">
+        <img class="twitter" src="/../assets/social-icons/Twitter.png" style="float:left;padding: 10px">
+          <p>Twitter<br><span style="color: rgba(255,255,255,.5)">@TPINPAL</span></p>
+      </a>
+      <a href="https://github.com/PINPAL/" style="display:inline-block;min-width: 230px">
+        <img class="twitter" src="/../assets/social-icons/Reddit.png" style="float:left;padding: 10px">
+          <p>Reddit<br><span style="color: rgba(255,255,255,.5)">THE_PINPAL614</span></p>
+      </a>
+      <a href="https://www.reddit.com/user/THE_PINPAL614" style="display:inline-block;min-width: 230px">
+        <img class="twitter" src="../assets/social-icons/Github.png" style="float:left;padding: 10px">
+          <p>Github<br><span style="color: rgba(255,255,255,.5)">PINPAL</span></p>
+      </a>
+
+    <p>Anyway, that's enough introduction, let's dive right into this!</p>
+
+  </div>
+
+  <h1 id="link1">Stage 1: Folder Structure</h1>
+
+  <div class="bigbox">
+    <h2>Themes have very specific folder structures.</h2>
+
+    <p>Without following the correct structure your theme won't work or may not even show up!
+    <br>So that's what I'm here to help you with.
+    <br>First you will need to create a folder and name it <mark>ThemeName.theme</mark>.
+    <br>It's essential to add <mark>.theme</mark> to the end or else it won't work!</p>
+
+    <div class="directory">ThemeName.theme</div>
+
+    <p>Inside this folder you will need another folder called <mark>IconBundles</mark> like this:</p>
+
+    <div class="directory">ThemeName.theme</div>
+    <div class="directory folderExpander">IconBundles</div>
+
+    <p>Now for the hard part, you'll need to create a file named <mark>Info.plist</mark><br>Place it in the root directory of the theme like this:</p>
+
+    <div class="directory">ThemeName.theme</div>
+    <div class="directory folderExpander" style="background-image: url('../assets/theme-guide/plist.png')">Info.plist</div>
+  </div>
+
+  <h1 id="link2">Stage 2: Info.plist</h1>
+
+  <div class="bigbox">
+    <h2>So you've got an Info.plist, now let's give it some info!</h2>
+
+    <p>Now open up your Info.plist with your favourite text editor.
+    I highly recommend <a href="https://atom.io/">Atom Editor by Github</a> or <a href="https://code.visualstudio.com/download">Microsoft VS Code</a> however most text editors will work. You can even use XCode!
+    <br>Your going to need to change the <mark>ThemeName</mark> to the name of your theme.
+
+    <div class="codebox" style="padding-bottom: 110px">
+  <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+  &lt;plist version="1.0"&gt;
+  &lt;dict&gt;
+    &lt;key>PackageName&lt;/key&gt;
+    &lt;string><span id="importantText"">ThemeName</span>&lt;/string&gt;
+    &lt;key>ThemeType&lt;/key&gt;
+    &lt;string>Icons&lt;/string&gt;
+  &lt;/dict&gt;
+&lt;/plist&gt;</pre>
+
+<a href="../assets/theme-guide/Info.plist" download>
+  <div class="codeboxDownload" style="background-image:url(../assets/theme-guide/plist.png)">
+    <p class="fileName">Info.plist</p>
+    <p class="downloadFileDescription">Download Example File</p>
+    <img src="../assets/theme-guide/download.png" class="downloadFileIcon">
+  </div>
+</a>
+
+</div>
+
+    <p>In the future you can add more complex stuff to your <mark>Info.plist</mark> but for now this is enough.
+    <br>You can extra things such as changing the font on the calendar icon, dock color, icon badges etc.</p>
+  </div>
+
+  <h1 id="link3">Stage 3: Creating Icons</h1>
+
+  <div class="bigbox">
+    <h2>Your Info.plist is done, Now let's make some icons!</h2>
+
+    <p>Now let's get the most important part out the way.
+    You are going to need some software to create your icons with!
+    Personally I use a combination of <a href="https://www.adobe.com/uk/products/illustrator.html">Adobe Illustrator</a> and <a href="https://www.adobe.com/uk/products/photoshop.html">Adobe Photoshop</a>.
+    A lot of other designers I know also recommend <a href="https://www.sketchapp.com/">Sketch</a>.</p>
+
+    <h2>So you can't afford any of these expensive programs?</h2>
+
+    <p>Don't worry, all hope is not lost! Theres still some great software out there!
+    You can try programs such as <a href="https://www.getpaint.net/">Paint.net (Windows only)</a> or <a href="https://www.gimp.org/">Gimp</a>.
+    Free programs may not have all the features but that doesn't make them bad!</p>
+
+    <h2>Icon Size and Resolution</h2>
+
+    <p>It is highly recommended to create your icons at a resolution of <mark>512x512</mark>.
+    <br>This allows your icons to work on iPad and also on future devices with higher resolution displays!
+    Also thanks to IconBundles you no-longer have to worry about making loads of different size icons for each device unlike what you used to have to do when using Winterboard! Awesome!
+
+    <h2>Custom Icon Shapes</h2>
+
+    <p>If you plan on making your icons a custom shape, for example circular. I highly recommend that you create the icons themselves square and add an icon mask.
+      Just create a square icon like this:</p>
+      <img src=../assets/theme-guide/example-icon.png>
+      <p>Then later in this guide I will teach you how to apply a mask to all your icons. The main benefit to this method is that the mask can be enabled/disabled by the user in their themeing engine!</p>
+
+  </div>
+
+  <h1 id="link4">Stage 4: Saving Your Icons</h1>
+
+  <div class="bigbox">
+    <h2>Name and Format of Your Icons</h2>
+
+    <p>Naming the icons files correctly is extremely important! All icons must be saved in <mark>.png</mark> format.
+    <br> Icons must be named: <mark>bundleID-large.png</mark> into the <mark>IconBundles</mark> folder like this:</p>
+
+    <div class="directory">ThemeName.theme</div>
+    <div class="directory folderExpander">IconBundles</div>
+    <div class="directory folderExpander" style="background:none;padding-left: 30px;">
+        <div class="directory folderExpander" style="background-image:url(../assets/theme-guide/com.apple.AppStore-large.png);margin:0;">com.apple.AppStore-large.png</div>
+    </div>
+
+    <p>You can save as many icons as you would like into your <mark>IconBundles</mark> folder
+
+    <h2>What is a BundleID?</h2>
+
+    <p>A bundleID is a unique identifer for each application. For example the App Store app is <mark>com.apple.AppStore</mark>
+    <br>This would mean your completed icon would be saved as <mark>com.apple.AppStore-large.png</mark>
+
+    <h2>How do I find out a BundleID?</h2>
+
+    <p>I wrote a page here where you find out the BundleID's for the stock apps aswell as popular Jailbreak apps:</p>
+
+    <a href="../stock-identifiers/"><div class="button">Stock iOS & Common Jailbreak BundleID's</div></a>
+
+    <p>As for finding those for third party/app store apps you can use this site:</p>
+
+    <a href="http://offcornerdev.com/bundleid.html"><div class="button" style="background: linear-gradient(to right, #2B7DCA , #55B49D);">Third Party BundleID's</div></a>
+  </div>
+
+  <h1 id="link5">Stage 5: Icon Masks</h1>
+
+  <div class="bigbox">
+    <h2>What Are Icon Masks?</h2>
+
+    <p>An icon mask is a optional theming feature that allows a mask to be applied to icons.
+    A mask allows you to create your icons themselves in a square then you could, for example, make them all circle.
+    The main advantage to using icon masks is that the user can toggle them on or off or use any mask shape they want.</p>
+
+    <h2>But I want all my icons to have different masks?</h2>
+
+    <p>If you would like to have all different shape icons, that's also possible. Just save the icon with a transparent background directly to IconBundles.</p>
+
+    <h2>Help! My Icons are all square!</h2>
+
+    <p>Icon masks are optional and if the <mark>Info.plist</mark> is left like the one above at the very start of the guide then your theme will <b>NOT</b> use a mask.
+    If you would like to enable the default iOS stock icon mask (the classic rounded rectangle) then simply add the orange section to your <mark>Info.plist</mark>:</p>
+
+    <div class="codebox" style="padding-bottom: 110px">
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;plist version="1.0"&gt;
+  &lt;dict&gt;
+<span id="importantText">       &lt;key&gt;IB-MaskIcons&lt;/key&gt;
+    &lt;true/&gt;</span>
+    &lt;key>PackageName&lt;/key&gt;
+    &lt;string>ThemeName&lt;/string&gt;
+    &lt;key>ThemeType&lt;/key&gt;
+    &lt;string>Icons&lt;/string&gt;
+    &lt;/dict&gt;
+  &lt;/plist&gt;</pre>
+
+      <a href="../assets/theme-guide/Info.plist" download>
+        <div class="codeboxDownload" style="background-image:url(../assets/theme-guide/plist.png)">
+          <p class="fileName">Info.plist</p>
+          <p class="downloadFileDescription">Download Example File</p>
+          <img src="../assets/theme-guide/download.png" class="downloadFileIcon">
+        </div>
+      </a>
+
+</div>
+
+
+    <p>And that's all you need to do to enable Icon Masks. If you would like to use a custom icon mask shape then continue reading below.
+
+    <h2>Creating Custom Masks</h2>
+    
+    <p>it should be noted that you don't have to use custom icon masks. This is an optional addition to your theme.</p>
+    <p>Before we save our custom icon masks, we are first going to need to create some. Your going to need to start by opening a transparent 512x512 document in
+      your image editor of choice. It is very important your background is transparent. Now you will need to create the shape of the mask, this can be any shape you
+      like.</p>
+    <p>Areas you want the mask to hide should be transparent and areas you want to keep should be pure black (#000000). 
+      <br>For example see the following circle mask below:</p>
+
+    <div class="maskRow">
+      <div class="maskColumn" style="width: calc(76% - 10px)">
+        <h3>Mask</h3>
+        <img src="../assets/theme-guide/mask-demo.png" alt="Snow" style="width:100%">
+      </div>
+      <div class="maskColumn" style="width: calc(24% - 10px)">
+        <h3>Result</h3>
+        <img src="../assets/theme-guide/mask-result.png" alt="Forest" style="width:100%">
+      </div>
+    </div>
+
+    <h2>Saving Custom Masks</h2>
+
+    <p>In this section I am going to explain how you can save your icon masks. First we are going to need to create some new folders. 
+      In the root directory of your theme, create a folder named <mark>Bundles</mark> so that you have two folders like this:
+    </p>
+
+    <div class="directory">ThemeName.theme</div>
+    <div class="directory folderExpander">IconBundles</div>
+    <div class="directory folderExpander">Bundles</div>
+
+    <p>Inside the Bundles folder you are going to need to add another folder named <mark>com.apple.mobileicons.framework</mark> just like this:</p>
+
+    <div class="directory">ThemeName.theme</div>
+    <div class="directory folderExpander">IconBundles</div>
+    <div class="directory folderExpander">Bundles</div>
+    <div class="directory folderExpander" style="background:none;padding-left: 30px;">
+        <div class="directory folderExpander" style="margin:0;">com.apple.mobileicons.framework</div>
+    </div>
+
+    <p>Within this directory we can place all of our masks. I'm going to warn you now though, masking doesn't support IconBundles so unlike making icons we have
+      to use the old fashion way of making the icons at all the different resolutions for different devices and areas of iOS - this means we end up with a lot of files.
+    </p>
+
+    <p>Below you can find a table of all the different filenames and resolutions you will need to save your mask in:</p>
+
+    <table>
+      <tr>
+        <th>Filename</th>
+        <th>Resolution</th>
+      </tr><tr>
+        <td>AppIconMask@2x~ipad.png</td>
+        <td>152x512</td>
+      </tr><tr>
+        <td>AppIconMask@2x~iphone.png</td>
+        <td>120x120</td>
+      </tr><tr>
+        <td>AppIconMask@3x~ipad.png</td>
+        <td>180x180</td>
+      </tr><tr>
+        <td>AppIconMask@3x~iphone.png</td>
+        <td>180x180</td>
+      </tr><tr>
+        <td>AppIconMask~ipad.png</td>
+        <td>76x76</td>
+      </tr><tr>
+        <td>DocumentBadgeMask-20@2x.png</td>
+        <td>40x40</td>
+      </tr><tr>
+        <td>DocumentBadgeMask-145@2x.png</td>
+        <td>145x145</td>
+      </tr><tr>
+        <td>GameAppIconMask@2x.png</td>
+        <td>84x84</td>
+      </tr><tr>
+        <td>NotificationAppIconMask@2x.png</td>
+        <td>40x40</td>
+      </tr><tr>
+        <td>NotificationAppIconMask@3x.png</td>
+        <td>60x60</td>
+      </tr><tr>
+        <td>SpotlightAppIconMask@2x.png</td>
+        <td>80x80</td>
+      </tr><tr>
+        <td>SpotlightAppIconMask@3x.png</td>
+        <td>120x120</td>
+      </tr><tr>
+        <td>TableIconMask@2x.png</td>
+        <td>58x58</td>
+      </tr><tr>
+        <td>TableIconOutline@2x.png</td>
+        <td>58x58</td>
+      </tr>
+    </table>
+
+    <p>This means you end up with a folder looking something like this (but with more icons in it):</p>
+
+    <div class="miniDirectory"">ThemeName.theme</div>
+    <div class="miniDirectory miniFolderExpander">Bundles</div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;">com.apple.mobileicons.framework</div>
+    </div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="background:none;">
+          <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;background-image:url(../assets/theme-guide/imageIcon.png)">AppIconMask@2x~ipad.png</div>
+        </div>
+    </div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="background:none;">
+          <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;background-image:url(../assets/theme-guide/imageIcon.png)">AppIconMask@2x~iphone.png</div>
+        </div>
+    </div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="background:none;">
+          <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;background-image:url(../assets/theme-guide/imageIcon.png)">AppIconMask@3x~ipad.png</div>
+        </div>
+    </div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="background:none;">
+          <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;background-image:url(../assets/theme-guide/imageIcon.png)">AppIconMask@3x~iphone.png</div>
+        </div>
+    </div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="background:none;">
+          <div class="miniDirectory miniFolderExpander" style="margin:0;background: none;">etc...</div>
+        </div>
+    </div>
+
+    <p>But that's it, you have now created and setup custom icon masks!</p>
+
+  </div>
+
+  <h1 id="link6">Stage 6: Settings Icons</h1>
+
+  <div class="bigbox">
+    <h2>Optional: Creating Icons to theme the Settings app!</h2>
+
+    <p>If you are looking to make a truly complete theme then you should definetly consider theming the icons inside the Settings app.</p>
+
+    <p>
+      Depending on your themes targeted iOS versions, the name of the <mark>com.apple.preferences-framework</mark> folder can change.
+      <br> You can include multiple folders if you wish to support multiple iOS versions.
+      <br><br> The folder names for the versions are as follows:
+      <br><b>For iOS 10 and Older</b>
+      <br><mark>com.apple.preferences</mark>
+      <br><b>For iOS 11</b>
+      <br><mark>com.apple.preferences-ui-framework</mark>
+      <br><b>For iOS 12 and Newer</b>
+      <br><mark>com.apple.preferences-framework</mark>
+    </p>
+
+    In your theme, preference icons must go into the following directory:
+     
+    <div class="miniDirectory"">ThemeName.theme</div>
+    <div class="miniDirectory miniFolderExpander">Bundles</div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;">com.apple.preferences-framework</div>
+    </div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="background:none;">
+          <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;background-image:url(../assets/theme-guide/imageIcon.png)">AirplaneMode@2x.png</div>
+        </div>
+    </div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="background:none;">
+          <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;background-image:url(../assets/theme-guide/imageIcon.png)">AirplaneMode@3x.png</div>
+        </div>
+    </div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="background:none;">
+          <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;background-image:url(../assets/theme-guide/imageIcon.png)">NotificationCenter@2x.png</div>
+        </div>
+    </div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="background:none;">
+          <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;background-image:url(../assets/theme-guide/imageIcon.png)">NotificationCenter@3x.png</div>
+        </div>
+    </div>
+    <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+        <div class="miniDirectory miniFolderExpander" style="background:none;">
+          <div class="miniDirectory miniFolderExpander" style="margin:0;background: none;">etc...</div>
+        </div>
+    </div>
+
+    <br><br>
+    Preferences icons must be supplied in both @2x and @3x variants to ensure device compatability. All files must be suffixed with <mark>@2x.png</mark> for a 59x59 pixel size image and <mark>@3x.png</mark> for a 89x89 resolution respectively.
+    <br><br>
+
+    For example, if you wanted to replace the Airplane icon in your theme you would need the following two files in the afformentioned folders:
+    <br><mark>AirplaneMode@2x.png</mark> 
+    <br><mark>AirplaneMode@3x.png</mark>
+
+    <h2>How do I find out a Settings filename?</h2>
+
+    <p>I wrote a page here where you find out the filename for each cell in the settings menu. Just head over to the "Settings" tab of the site linked below:</p>
+
+    <a href="../stock-identifiers/"><div class="button">Preferences Filenames</div></a>
+  </div>
+
+  <h1 id="link7">Stage 7: Compiling for Cydia/Sileo</h1>
+
+  <div class="bigbox">
+    <h2>Things are about to get complicated!</h2>
+
+    <p>Here we are going to need to compile our theme into a <mark>.deb</mark> format ready for Cydia/Sileo.
+    <br> Start by Creating a new folder. This one can be called anything as long as there are no spaces or any special characters.
+    For this example I will name mine <mark>ThemeNameForCydia</mark>.</p>
+
+    <div class="directory">ThemeNameForCydia</div>
+
+    <p>Now we are going to add a new folder inside. This one must be named <mark>DEBIAN</mark> just like this:</p>
+
+      <div class="directory">ThemeNameForCydia</div>
+      <div class="directory folderExpander">DEBIAN</div>
+
+      <p>Now we are going to create the <mark>control</mark> file. This is very important for telling Cydia/Sileo all the information about your theme.
+      This includes the name and description.
+      Create a new file inside the <mark>DEBIAN</mark> folder. This file must have no filename extension and be named <mark>control</mark>
+      It should now all look like this:</p>
+
+      <div class="directory">ThemeNameForCydia</div>
+      <div class="directory folderExpander">DEBIAN</div>
+      <div class="directory folderExpander" style="background:none;padding-left: 30px;">
+          <div class="directory folderExpander" style="background-image:url(../assets/theme-guide/control.png);margin:0;">control</div>
+      </div>
+
+      <p>Now your going to need to open up your <mark>control</mark> file with your favourite text editor just like you did with the <mark>Info.plist</mark>.
+      Using a text-editor that supports UNIX line endings is extremely important at this step! The ones I recommended earlier for <mark>Info.plist</mark> should work if you are unsure.
+      <br>Inside the <mark>control</mark> you will need to add the following code and fill out all the orange text.</p>
+
+      <div class="codebox" style="padding-bottom: 110px">
+<pre>Package: com.<span id="importantText">yourname</span>.<span id="importantText">themename</span>
+Name: <span id="importantText">Theme Name</span>
+Version: <span id="importantText">1.0</span>
+Architecture: iphoneos-arm
+Description: <span id="importantText">A theme with beautiful icons!</span>
+Author: <span id="importantText">Your Name</span>
+Maintainer: <span id="importantText">Your Name</span>
+Section: Themes
+Depends: com.anemonetheming.anemone | com.spark.snowboard
+
+</pre>
+      <a href="../assets/theme-guide/control" download>
+        <div class="codeboxDownload" style="background-image:url(../assets/theme-guide/control.png)">
+          <p class="fileName">control</p>
+          <p class="downloadFileDescription">Download Example File</p>
+          <img src="../assets/theme-guide/download.png" class="downloadFileIcon">
+        </div>
+      </a>
+  </div>
+
+      <h2>Important notes about the control file:</h2>
+
+        <p>• The package field MUST be lower case!
+        <br>• The version field MUST be changed everytime you update your theme!
+        <br>• The control file MUST have an extra blank line at the bottom!</p>
+
+      <h2>Adding your theme to the package</h2>
+
+      <p>Your now going to need to create a new folder inside <mark>ThemeNameForCydia</mark>. You will name this folder <mark>Library</mark>
+
+        <div class="directory">ThemeNameForCydia</div>
+        <div class="directory folderExpander">DEBIAN</div>
+        <div class="directory folderExpander">Library</div>
+
+      <br>You will now have 2 folders inside your <mark>ThemeNameForCydia</mark> folder.
+      <br>Now we are going to add another one. This one will go inside <mark>Library</mark> and be named <mark>Themes</mark> like this:
+
+      <div class="directory">ThemeNameForCydia</div>
+      <div class="directory folderExpander">DEBIAN</div>
+      <div class="directory folderExpander">Library</div>
+      <div class="directory folderExpander" style="background:none;padding-left: 30px;">
+          <div class="directory folderExpander" style="margin:0">Themes</div>
+      </div>
+
+      <p>Finally we are going to add our <mark>ThemeName.theme</mark> folder from earlier.
+      <br>Just drop in <mark>ThemeName.theme</mark> into the new <mark>Themes</mark> folder. Like this:
+
+      <div class="directory">ThemeNameForCydia</div>
+      <div class="directory folderExpander">DEBIAN</div>
+      <div class="directory folderExpander">Library</div>
+      <div class="directory folderExpander" style="background:none;padding-left: 30px;">
+          <div class="directory folderExpander" style="margin:0">Themes</div>
+      </div>
+      <div class="directory folderExpander" style="background:none;padding-left: 30px;">
+          <div class="directory folderExpander" style="background:none;padding-left: 30px;margin: 0;">
+            <div class="directory folderExpander" style="margin:0">ThemeName.theme</div>
+          </div>
+      </div>
+      
+      <h2>Almost done!</h2>
+
+      <p>Now we need to turn this folder into a <mark>.deb</mark> package!
+      <br>This is a super easy process! First you are going to need to SSH into your iOS Device.
+      <br>Now navigate to <mark>/var/mobile/Documents</mark>
+      <br>Drag and drop your <mark>ThemeNameForCydia</mark> folder onto your device in this location. Just Like this:</p>
+
+      <div class="miniDirectory" style="background-image: url(../assets/theme-guide/ssh.png)">SSH - Josh's iPhone</div>
+      <div class="miniDirectory miniFolderExpander">var</div>
+      <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+          <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;">mobile</div>
+      </div>
+      <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+          <div class="miniDirectory miniFolderExpander" style="background:none">
+            <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;">Documents</div>
+          </div>
+      </div>
+      <div class="miniDirectory miniFolderExpander" style="background:none;padding-left: 30px;">
+          <div class="miniDirectory miniFolderExpander" style="background:none">
+              <div class="miniDirectory miniFolderExpander" style="background:none">
+                  <div class="miniDirectory miniFolderExpander" style="margin:0;padding-left: 50px;">ThemeNameForCydia</div>
+                </div>
+          </div>
+      </div>
+
+      <p>Now we just need to run one command and then our theme is all ready to go!
+      <br>Connect to your iOS device using SSH and open the SSH terminal.
+      <br>Run the following command:</p>
+
+      <div class="codebox"><pre>
+  dpkg -b /var/mobile/Documents/ThemeNameForCydia</pre></div>
+
+      <p>Once the command is completed you will see a new file: <mark>ThemeNameForCydia.deb</mark>
+      <br>That's it you are all done! Feel free to move the <mark>.deb</mark> to your computer and delete it and the <mark>ThemeNameForCydia</mark> folder from your iOS device!
+  </div>
+
+  <h1 id="link8">Rounding Up</h1>
+
+  <div class="bigbox">
+    <h2>Congratulations!</h2>
+
+    <p>If you made it all the way through the guide and finished your theme I want to congratulate you! You made it!</p>
+
+    <p><br>If you would like to know more about the advanced features of theming such as theming the clock/badges/dock etc you can read the official Anemone Wiki available here (most of which also work in Snowboard):
+    <a href="https://github.com/AnemoneTeam/Anemone/wiki"> Anemone Wiki</a></p>
+
+  </div>
+
+  <h1>About This Guide</h1>
+
+  <div class="bigbox">
+    <h2>Information</h2>
+    <p><br>This guide took many hours to write and I continue to update it along with collecting the latest stock Bundle ID's.</p>
+    <p>As I said at the start of the guide you can always contact me on Discord or Twitter if you have any questions!
+    <p>If you really enjoyed this guide and would like to buy me a drink you can use the link below:</p>
+
+    <a href="https://www.paypal.me/thepinpal"><div class="button">Donate (PayPal)</div></a>
+  </div>
+</div>
+</body>
+<head>
+    <script src="../assets/global-navbar/navbar.js"></script>
+    <script src="../assets/theme-guide/javascript.js"></script>
+</head>
+</html>
