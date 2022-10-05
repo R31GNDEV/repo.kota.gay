@@ -21,7 +21,7 @@ function loadXMLDoc(filename) {
 
 // hi developer
 console.log(
-  "Hi there, if your reading this then you're a cool dude!\nHowever, there is something really really important I need to tell you..\nTo continue you must enter the secret passcode..\n\n\n\n\n\n\nP.S: It's superSecretCode()"
+  "Hi there, if your reading this then you're a cool person!\nHowever, there is something really really important I need to tell you..\nTo continue you must enter the secret passcode..\n\n\n\n\n\n\nP.S: It's superSecretCode()"
 );
 
 function superSecretCode() {
