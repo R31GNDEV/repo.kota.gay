@@ -1,4 +1,5 @@
-## Kota.gay
+## Kota.gay/repo
 
-This is an alternate portfolio to https://kotais.gay
-Website is live.
+This is the Official Kota Repo.
+
+Created by: Dakota Lee
