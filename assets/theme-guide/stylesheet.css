@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #292C30;
+    background-color: #000000;
 }
 
 /* Scrollbar Style */
@@ -13,11 +13,11 @@ body {
   height: 9px;
 }
 ::-webkit-scrollbar-track {
-    background: #48484f;
+    background: #46b2ff;
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-    background: #646569;
+    background: #fd00d7;
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
