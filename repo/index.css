@@ -1,0 +1,33 @@
+@import url('https://rsms.me/inter/inter.css');
+
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+
+  @supports (font-variation-settings: normal) {
+    html {
+      font-family: 'Inter var', sans-serif;
+    }
+  }
+
+  body {
+    background-color: #333;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .text-rainbow-animation {
+    background-image: 
+      linear-gradient(to right, rgb(255, 0, 204),rgb(0, 123, 255),rgb(255, 0, 204),rgb(0, 123, 255),rgb(255, 0, 204),rgb(0, 123, 255),rgb(255, 0, 204), rgb(0, 123, 255)); 
+    -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;  
+    animation: rainbow-animation 500s linear infinite;
+  }
+  
+  @keyframes rainbow-animation {
+      to {
+          background-position: 4500vh;
+      }
+  }
