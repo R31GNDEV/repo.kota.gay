@@ -1,29 +1,32 @@
-Package: gay.kota.nolabels13
-Version: 1.1.0
-Section: Tweaks
-Maintainer: Dakota <dakotalee04251@gmail.com>
-Depends: mobilesubstrate, preferenceloader
-Provides: gay.kota.nolabels13
+Package: gay.kota.koatzy
+Version: 1.0
 Architecture: iphoneos-arm
+Maintainer: Kota
+Depends: com.anemonetheming.anemone | com.spark.snowboard
+Filename: Files/koatzy/Koatzy.deb
+Size: 78628100
+MD5sum: e1c573f0f7e626e93114a2ed20ccdcfc
+SHA1: 88052a2a419e477163fc9b44256c5044c838c8dd
+SHA256: 6c30f4c0564cf7193551a0a2c64c5901daabbe78681a4d9d99b35438207bfc72
+Section: Themes
+Description: A theme with beautiful glass icons!
+Author: Kota
+Name: Koatzy
+
+Package: gay.kota.nolabels13
+Version: 0.9.0
+Architecture: iphoneos-arm
+Maintainer: Kota
+Installed-Size: 88
+Depends: mobilesubstrate (>= 0.9.5000)
+Conflicts: gay.kota.nolabels13
+Replaces: gay.kota.nolabels13
 Filename: Files/nolabels13/gay.kota.nolabels13_0.9.0_iphoneos-arm.deb
 Size: 1746
 MD5sum: d74399b86a1b196d23726fc2055929fd
-Description: No icon labels on iOS 13!
+SHA1: 505bca5f34495ea5ea0cd675c724757812d63f5e
+SHA256: 580a72fc3540be142ee256379bbb1c961b4387a0a9953167c809b9b1980bcfd8
+Section: Tweaks
+Description: Remove icon labels on iOS 13!
+Author: Kota
 Name: NoLabels13
-Author: Dakota <dakotalee04251@gmail.com>
-Depiction: http://kota.gay/repo/Files/nolabels13/index.html
-
-Package: gay.kota.koatzy
-Version: 1.1.0
-Section: Themes
-Maintainer: Dakota <dakotalee04251@gmail.com>
-Depends: mobilesubstrate, preferenceloader
-Provides: gay.kota.koatzy
-Architecture: iphoneos-arm
-Filename: Files/koatzy/gay.kota.koatzy.deb
-Size: 78628100
-MD5sum: e1c573f0f7e626e93114a2ed20ccdcfc
-Description: Glass icons for iOS 13
-Name: Koatzy
-Author: Dakota <dakotalee04251@gmail.com>
-Depiction: http://kota.gay/repo/Files/koatzy/index.html
