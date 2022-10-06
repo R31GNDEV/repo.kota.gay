@@ -1,8 +1,8 @@
 Origin: Kota's repo
-Label: Kota's repo
+Label: KotasRepo
 Suite: stable
 Version: 1.0
-Codename: Kotarepo
+Codename: ios
 Architectures: iphoneos-arm
 Components: main
 Description: Kota's Sileo Repository
