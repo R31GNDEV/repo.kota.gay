@@ -4,6 +4,12 @@
     "itemCornerRadius": 12,
     "banners": [
       {
+        "url": "https://cdn.discordapp.com/attachments/1025324464851922945/1028208567926398996/34940309-57f21208-f9ef-11e7-95a5-2cb89285c175.JPG",
+        "title": "Koatzy",
+        "package": "gay.kota.koatzy",
+        "hideShadow": false
+      },
+      {
         "url": "https://cdn.discordapp.com/attachments/366628660939194378/596010124112560129/SileoBanner.png",
         "title": "NoLabels13",
         "package": "gay.kota.nolabels13",
