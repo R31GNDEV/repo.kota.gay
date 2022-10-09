@@ -13,6 +13,22 @@ Description: A theme with beautiful glass icons!
 Author: Kota
 Name: Koatzy
 
+Package: gay.kota.nodock13
+Version: 0.0.1-1+debug
+Architecture: iphoneos-arm
+Maintainer: kota
+Installed-Size: 168
+Depends: mobilesubstrate (>= 0.9.5000)
+Filename: Files/nodock13/gay.kota.nodock13_0.0.1-1+debug_iphoneos-arm.deb
+Size: 2272
+MD5sum: ac84eb8909e03b01ea4c220cd0343d36
+SHA1: 5efaf52cce170cb08ff71ea3e390b121b1c2ee7e
+SHA256: 64cf401ed03b666aa3b2a8bcfb140d8b75a6149befc1f127ecf8287cc5395757
+Section: Tweaks
+Description: An awesome MobileSubstrate tweak!
+Author: kota
+Name: NoDock13
+
 Package: gay.kota.nolabels13
 Version: 0.9.0
 Architecture: iphoneos-arm
@@ -30,4 +46,3 @@ Section: Tweaks
 Description: Remove icon labels on iOS 13!
 Author: Kota
 Name: NoLabels13
-
