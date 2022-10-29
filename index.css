@@ -26,6 +26,13 @@
     animation: rainbow-animation 500s linear infinite;
   }
   
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+  }
+
   @keyframes rainbow-animation {
       to {
           background-position: 4500vh;
@@ -34,7 +41,7 @@
 
   .spotify-rainbow-animation {
     background-image: 
-      linear-gradient(to right, rgb(255, 0, 204),rgb(0, 123, 255),rgb(255, 0, 204),rgb(0, 123, 255),rgb(255, 0, 204),rgb(0, 123, 255),rgb(255, 0, 204), rgb(0, 123, 255)); 
+      background-image(url(""));  
     animation: rainbow-animation 500s linear infinite;
   }
 
@@ -43,3 +50,36 @@
         background-position: -4500vh;
     }
 }
+
+ /* Style the navbar */
+ #navbar {
+  overflow: hidden;
+  background-color: rgb(251, 103, 214);
+}
+
+/* Navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+} 
