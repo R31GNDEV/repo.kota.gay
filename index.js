@@ -24,13 +24,13 @@ const setResponse = (res) => {
     document.querySelector(
       "#spotify"
     ).innerHTML = `<div class="spotify-rainbow-animation px-6 md:px-4 py-4" style="display:block">
-      <div class="max-w-6xl mx-auto container text-grey-300">
+      <div class="max-w-6xl mx-auto container text-blue-300">
         <div class="flex">
           <div class="flex-initial">
             <i class="fad fa-play-circle mr-2"></i>
           </div>
           <div class="flex-1">
-            Currently listening to <b>${res.name}</b> by <b>${res.artist}</b> on <b>Spotify</b>
+            Dakota is currently listening to <b>${res.name}</b> by <b>${res.artist}</b> on <u>Spotify</u>
           </div>
         </div>
       </div>
