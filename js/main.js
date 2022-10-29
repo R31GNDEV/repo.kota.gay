@@ -50,7 +50,7 @@ function styleDefault(){
 		"line_linked": {
 			"enable": true,
 			"distance": 150,
-			"color": "#ffffff",
+			"color": "#ff00d9",
 			"opacity": 0.4,
 			"width": 1
 		},
@@ -124,7 +124,7 @@ function styleSpace(){
 				}
 			},
 			"color": {
-				"value": "#ffffff"
+				"value": "#ff00d9"
 			},
 			"shape": {
 				"type": "circle",
@@ -164,7 +164,7 @@ function styleSpace(){
 			"line_linked": {
 				"enable": false,
 				"distance": 150,
-				"color": "#ffffff",
+				"color": "#ff00d9",
 				"opacity": 0.4,
 				"width": 1
 			},
@@ -238,7 +238,7 @@ function styleSnow(){
 			}
 		},
 		"color": {
-			"value": "#fff"
+			"value": "#ff00d9"
 		},
 		"shape": {
 			"type": "circle",
@@ -278,7 +278,7 @@ function styleSnow(){
 		"line_linked": {
 			"enable": false,
 			"distance": 500,
-			"color": "#ffffff",
+			"color": "#ff00d9",
 			"opacity": 0.4,
 			"width": 2
 		},
