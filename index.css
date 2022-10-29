@@ -41,6 +41,11 @@
 
   .spotify-rainbow-animation {
     background-image: url("https://media.discordapp.net/attachments/1025324464851922945/1035732705863798794/dark.png?width=1612&height=690");
+    background-image: 
+      linear-gradient(to right, rgb(255, 255, 255, 50),rgb(0, 123, 255),rgb(255, 0, 204),rgb(0, 123, 255),rgb(255, 0, 204),rgb(0, 123, 255),rgb(255, 0, 204), rgb(255, 255, 255, 50));
+    border-width: 3px;
+    border-color: pink;
+    animation: rainbow-animation 1000s linear infinite;
   }
 
   @keyframes spotify-animation {
