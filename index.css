@@ -40,8 +40,7 @@
   }
 
   .spotify-rainbow-animation {
-    background-image: 
-      background-image url("https://cdn.discordapp.com/attachments/1025324464851922945/1035732705863798794/dark.png"); 
+    background-image: url("https://media.discordapp.net/attachments/1025324464851922945/1035732705863798794/dark.png?width=1612&height=690");
   }
 
   @keyframes spotify-animation {
