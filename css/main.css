@@ -5,8 +5,8 @@
   width: 15%;
   background-color: black;
   background-blend-mode: darken;
-  border-width: 1px;
-  border-color: pink;
+  border-width: 3px;
+  border-color: rgb(255, 0, 204);
   border-radius: 50%;
   -webkit-background-clip: border-box;
 }
