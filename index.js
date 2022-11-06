@@ -19,7 +19,7 @@ const parseResponse = (res) => {
 };
 
 const setResponse = (res) => {
-  if (res.np === true) {
+  if (res.np) {
     console.log(`[last.fm] Received song data: ${res.name} - ${res.artist}`);
     document.querySelector(
       "#spotify"
