@@ -24,6 +24,12 @@
   }
 }
 
+@media only screen and (max-width: 1000px) {
+  .absolute.p-16.inset-0.flex.items-center {
+  padding: 0 0 !important;
+  }
+}
+
 .header {
 background-color: #f1f1f1;
 padding: 30px;
